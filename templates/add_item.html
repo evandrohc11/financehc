@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Item{% endblock %}
+
+{% block body %}
+<h2>Add Item</h2>
+
+<form method="POST">
+    <input type="text" name="name" placeholder="Item Name" required>
+    <input type="number" step="0.01" name="total" placeholder="Total Amount" required>
+    <input type="number" name="day" placeholder="Day (as Integer)" required>
+    <input type="number" name="month" placeholder="Month (as Integer)" required>
+    <input type="submit" value="Add Item">
+</form>
+
+<a href="{{ url_for('index') }}">Cancel</a>
+{% endblock %}

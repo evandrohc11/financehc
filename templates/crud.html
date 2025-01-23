@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}CRUD Operations{% endblock %}
+
+{% block body %}
+<h2>CRUD Operations</h2>
+
+<!-- Display Items -->
+<h3>Items</h3>
+<form method="POST">
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Total</th>
+        <th>Day</th>
+        <th>Month</th>
+        <th>Actions</th>
+    </tr>
+    {% for item in items %}
+    <tr>
+        <td>
+            <input type="checkbox" name="item_ids" value="{{ item.id }}">
+        </td>
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.total }}</td>
+        <td>{{ item.day }}</td>
+        <td>{{ item.month }}</td>
+
+        <td>
+            <a href="/edit_item/{{ item.id }}">Edit</a> | 
+            <a href="/delete_item/{{ item.id }}">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+<button type="submit" formaction="/bulk_clone">Clone Selected</button>
+<button type="submit" formaction="/bulk_delete">Delete Selected</button>
+</form>
+{% endblock %}

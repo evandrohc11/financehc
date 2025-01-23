@@ -1,0 +1,40 @@
+
+#### IMPORTING DATABASE #######
+- Handle the database and return to html (@app.route... def xxxx... return html)
+- Update html code (<camp>)
+- Database updates (ALTER TABLE process)
+- Update import file to fit the changes (columns, ETL)
+- deploy (start script virtual env, git init, add, commit, push)
+GREAT!!!!
+
+##### FIRST TIME:: 
+
+1) python -m venv venv
+2) venv\Scripts\activate
+3) git init
+4) git add .
+5) git commit -m "Commit xxx_coments_XXXX "
+6) git push heroku master
+
+
+
+
+####### CREATE TABLE STATEMENT #######
+
+CREATE TABLE Item (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    total NUMERIC(10, 2) NOT NULL,
+    day INTEGER NOT NULL,
+    month INTEGER NOT NULL
+);
+
+
+
+CREATE TABLE Item (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    total NUMERIC(10, 2) NOT NULL,
+    day INTEGER NOT NULL
+);
+eee

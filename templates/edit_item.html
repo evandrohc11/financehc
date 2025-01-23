@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Item{% endblock %}
+
+{% block body %}
+<h2>Edit Item</h2>
+
+<form method="POST">
+    <input type="text" name="name" value="{{ item.name }}" required>
+    <input type="number" step="0.01" name="total" value="{{ item.total }}" required>
+    <input type="number" name="day" value="{{ item.day }}" required>
+    <input type="number" name="month" value="{{ item.month }}" required>
+    <input type="submit" value="Save">
+</form>
+
+<a href="{{ url_for('index') }}">Cancel</a>
+{% endblock %}
