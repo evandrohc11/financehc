@@ -26,9 +26,10 @@ class Item(db.Model):
     total = db.Column(db.Numeric(10, 2), nullable=False)
     day = db.Column(db.Integer, nullable=False)
     month = db.Column(db.Integer, nullable=False)
+    year = db.Column(db.Integer, nullable=False)
 
     def to_dict(self):
-        return {"id": self.id, "name": self.name, "total": str(self.total), "day": self.day, "month": self.month}
+        return {"id": self.id, "name": self.name, "total": str(self.total), "day": self.day, "month": self.month, "year": self.year}
 
 # Routes
 @app.route('/')

@@ -15,6 +15,7 @@
         <th>Total</th>
         <th>Day</th>
         <th>Month</th>
+        <th>Year</th>
         <th>Actions</th>
     </tr>
     {% for item in items %}
@@ -27,6 +28,7 @@
         <td>{{ item.total }}</td>
         <td>{{ item.day }}</td>
         <td>{{ item.month }}</td>
+        <td>{{ item.year }}</td>
 
         <td>
             <a href="/edit_item/{{ item.id }}">Edit</a> | 
